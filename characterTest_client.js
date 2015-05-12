@@ -44,7 +44,7 @@ var final_div = document.getElementById("final");
 var match_elem = document.createElement( "p" )
 final_div.appendChild(match_elem);
 if(matches != "none"){
-  match_elem.innerHTML = "Your Soulmates are :"+ matches;
+  match_elem.innerHTML = "Your Soulmates are: "+ matches;
 }
 else{
   match_elem.innerHTML = "Sorry, you have no Soulmates";

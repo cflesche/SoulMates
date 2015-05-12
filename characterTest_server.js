@@ -57,7 +57,10 @@ function getMatch(res){
     var theMatch = "";
     for(var i=0;i<list.length-1;i++){
       if(list[i]==list[list.length-1]){
-        theMatch += usernames[i] + ", ";
+        if(theMatch.length>1){
+          theMatch+=", ";
+        }
+        theMatch += usernames[i];
       }
     }
     if(theMatch == ""){
