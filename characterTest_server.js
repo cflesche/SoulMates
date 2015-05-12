@@ -20,8 +20,8 @@ function giveBackFile( name, res )
 }
 
 function addResults(req, res){
-
-    var results = req.url.toString().split("=")[1];
+    var nospace = req.url.replace(/%20/g, " ");
+    var results = nospace.toString().split("=")[1];
     var username = results.split("/");
     var results2 = results.toString().split("?")[1];
     var indv_result = results2.split("&");
