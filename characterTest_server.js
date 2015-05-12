@@ -100,6 +100,11 @@ function doTheServer( req, res )
         giveBackFile( "characterTest.html", res );
     }
 }
-
+if(process.argv.length < 3){
+  var port = 8080;
+}
+else{
+  var port = parseInt(process.argv[2]);
+}
 var server = http.createServer( doTheServer );
-server.listen( 8080 );
+server.listen( port );
