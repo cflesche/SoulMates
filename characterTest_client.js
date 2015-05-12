@@ -7,7 +7,6 @@ var results = "/results?";
 results += "results=" + result_elem.value;
 console.log(results);
 name_sender.open( "get", results );
-//name_sender.onload = addDone;
 name_sender.send();
 }
 function getAnswers()
@@ -30,7 +29,6 @@ url += "username=" + user_elem.value;
 url += "/getResults?";
 url += answer_elem1+"&"+answer_elem2+"&"+answer_elem3
 +"&"+answer_elem4+"&"+answer_elem5;
-console.log(url);
 results_sender.open("get", url);
 results_sender.send();
 }
@@ -42,5 +40,13 @@ info_request.send();
 }
 function showResults(){
 var matches = JSON.parse(this.responseText);
-var url = "/finalPage?";
+var final_div = document.getElementById("final");
+var match_elem = document.createElement( "p" )
+final_div.appendChild(match_elem);
+if(matches != "none"){
+  match_elem.innerHTML = "Your Soulmates are :"+ matches;
+}
+else{
+  match_elem.innerHTML = "Sorry, you have no Soulmates";
+}
 }

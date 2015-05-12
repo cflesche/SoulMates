@@ -15,24 +15,6 @@ function giveBackFile( name, res )
         res.end( "" );
         return;
     }
-
-    res.writeHead( 200 );
-    res.end( contents );
-}
-function giveBackImage( name, res )
-{
-    var contents = "";
-    try {
-    	contents = fs.readFileSync( name );
-    }
-    catch( e ) {
-    	console.log(
-    	    "Error: Something bad happened trying to open "+name );
-        res.writeHead( 404 );
-        res.end( "" );
-        return;
-    }
-
     res.writeHead( 200 );
     res.end( contents );
 }
@@ -72,18 +54,20 @@ function getMatch(res){
           }  );
     db.close(
     function(){
-    res.writeHead(200);
     var theMatch = "";
     for(var i=0;i<list.length-1;i++){
       if(list[i]==list[list.length-1]){
-        theMatch += " "+usernames[i];
-
+        theMatch += usernames[i] + ", ";
       }
     }
-    if(theMatch == null){
-      res.end("");
+    if(theMatch == ""){
+      theMatch = "none";
+      res.writeHead(200);
+      res.end(JSON.stringify(theMatch));
+
     }
     else{
+      res.writeHead(200);
       res.end(JSON.stringify(theMatch));
     }
   }
@@ -116,4 +100,3 @@ function doTheServer( req, res )
 
 var server = http.createServer( doTheServer );
 server.listen( 8080 );
-
