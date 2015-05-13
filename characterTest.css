@@ -2,7 +2,7 @@
  display: inline-block;
   margin: 10px;
   padding: 8px 15px;
-  background: #B8ED01;
+  background: #FF99CC ;
   border: 1px solid rgba(0,0,0,0.15);
   border-radius: 4px;
   transition: all 0.3s ease-out;
@@ -11,14 +11,20 @@
     0 2px 2px rgba(0,0,0,0.3),
     0 0 4px 1px rgba(0,0,0,0.2);
 }
-#heart { position: relative; width: 100px; height: 90px; } #heart:before, #heart:after { position: absolute; content: ""; left: 50px; top: -30px; width: 50px; height: 80px; background: red; -moz-border-radius: 50px 50px 0 0; border-radius: 50px 50px 0 0; -webkit-transform: rotate(-45deg); -moz-transform: rotate(-45deg); -ms-transform: rotate(-45deg); -o-transform: rotate(-45deg); transform: rotate(-45deg); -webkit-transform-origin: 0 100%; -moz-transform-origin: 0 100%; -ms-transform-origin: 0 100%; -o-transform-origin: 0 100%; transform-origin: 0 100%; } #heart:after { left: 0; -webkit-transform: rotate(45deg); -moz-transform: rotate(45deg); -ms-transform: rotate(45deg); -o-transform: rotate(45deg); transform: rotate(45deg); -webkit-transform-origin: 100% 100%; -moz-transform-origin: 100% 100%; -ms-transform-origin: 100% 100%; -o-transform-origin: 100% 100%; transform-origin :100% 100%; }
+#heart {
+ position: relative; 
+ width: 100px; 
+height: 90px; }
+ 
+#heart:before, #heart:after { position: absolute; content: ""; left: 50px; top: -30px; width: 50px; height: 80px; background: #FF99CC; -moz-border-radius: 50px 50px 0 0; border-radius: 50px 50px 0 0; -webkit-transform: rotate(-45deg); -moz-transform: rotate(-45deg); -ms-transform: rotate(-45deg); -o-transform: rotate(-45deg); transform: rotate(-45deg); -webkit-transform-origin: 0 100%; -moz-transform-origin: 0 100%; -ms-transform-origin: 0 100%; -o-transform-origin: 0 100%; transform-origin: 0 100%; } #heart:after { left: 0; -webkit-transform: rotate(45deg); -moz-transform: rotate(45deg); -ms-transform: rotate(45deg); -o-transform: rotate(45deg); transform: rotate(45deg); -webkit-transform-origin: 100% 100%; -moz-transform-origin: 100% 100%; -ms-transform-origin: 100% 100%; -o-transform-origin: 100% 100%; transform-origin :100% 100%; }
 
 k{
 
  display: inline-block;
   margin: 10px;
   padding: 8px 15px;
-  background: #B8ED01;
+  background: #FF99CC;
+  opacity:0.8;
   border: 1px solid rgba(0,0,0,0.15);
   border-radius: 4px;
   transition: all 0.3s ease-out;
@@ -28,8 +34,16 @@ k{
     0 0 4px 1px rgba(0,0,0,0.2);}
 
 #rotate{
-color:#f00000;
-font-size:100%;
+
+        font-family: Georgia, "Times New Roman", Times, serif;
+        font-size:34px;
+	margin-top: 5px; margin-bottom: 0px;
+	text-align: center;
+        font-weight: normal;
+color:#FF99CC;
+text-shadow: 2px 2px 2px #CCCCCC;}
+
+
 
 
 .image{
@@ -39,59 +53,6 @@ width:100%;
 
 #final{
 font-size:150%;
-}
 
-#modern{
-
-border: 10px dotted Cornsilk;
-padding: 20px;
-background:#fffcf1;
-background-clip:padding-box;
-font-size:150%;
-}
-
-.modern:hover  { background: #C7FE0A; }
-
-.embossed-link {
-  box-shadow: 
-    inset 0 3px 2px rgba(255,255,255,.22), 
-    inset 0 -3px 2px rgba(0,0,0,.17), inset 0 20px 10px rgba(255,255,255,.12), 
-    0 0 4px 1px rgba(0,0,0,.1), 
-    0 3px 2px rgba(0,0,0,.2);
-}
-
-.modern.embossed-link {
-  box-shadow:
-    inset 0 1px 0 rgba(255,255,255,0.5),
-    0 2px 2px rgba(0,0,0,0.3),
-    0 0 4px 1px rgba(0,0,0,0.2),
-    inset 0 3px 2px rgba(255,255,255,.22), 
-    inset 0 -3px 2px rgba(0,0,0,.15), 
-    inset 0 20px 10px rgba(255,255,255,.12), 
-    0 0 4px 1px rgba(0,0,0,.1), 
-    0 3px 2px rgba(0,0,0,.2);
-}
-.modern.embossed-link:active {
-  box-shadow: 
-    inset 0 -2px 1px rgba(255,255,255,0.2),
-    inset 0 3px 2px rgba(0,0,0,0.12);
-}
-
-.socle {
-  position: relative;
-  z-index: 2;
-}
-
-.socle:after {
-  content: "";
-  z-index: -1;
-  position: absolute;
-  border-radius: 6px;
-  box-shadow: 
-	inset 0 1px 0 rgba(0,0,0,0.1),
-	inset 0 -1px 0 rgba(255,255,255,0.7);
-  top: -6px; bottom: -6px;
-  right: -6px; left: -6px;
-  background: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0));
 }
 
